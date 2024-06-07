@@ -1,19 +1,46 @@
 # https://github.com/krishnaik06/Finetuning-LLM/blob/main/Fine_tune_Llama_2.ipynb, https://github.com/believewhat/Dr.NoteAid, https://github.com/TheSeriousProgrammer/SimpleBitNet/tree/main, https://huggingface.co/datasets/omi-health/medical-dialogue-to-soap-summary
 import json
+import csv
 
-def process_jsonl(input_file, output_file):
-    with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
-        for line in infile:
-            try:
-                data = json.loads(line)
-                # Extract the "dialogue" and "soap" fields
-                dialogue = data.get("dialogue", "")
-                soap = data.get("soap", "")
-                new_data = {"dialogue": dialogue, "soap": soap}
-                outfile.write(json.dumps(new_data) + '\n')
-            except json.JSONDecodeError:
-                print(f"Skipping invalid JSON line: {line}")
+class DataTransformer:
+    def __init__(self, jsonl_file, output_csv_file):
+        self.jsonl_file = jsonl_file
+        self.output_csv_file = output_csv_file
 
-input_file = 'data/validation.jsonl'
-output_file = 'data/validation_output.jsonl'
-process_jsonl(input_file, output_file)
+    def llama_template(self):
+        transformed_data = []
+        with open(self.jsonl_file, 'r') as infile:
+            for line in infile:
+                try:
+                    example = json.loads(line)
+                    dialogue = example.get("dialogue", "").replace('\n', ' ').strip()
+                    soap = example.get("soap", "").replace('\n', ' ').strip()
+                    # Apply the Llama2 template
+                    transformed_text = f'<s>[INST] {dialogue} [/INST] {soap} </s>'
+                    transformed_data.append({"data": transformed_text})
+                except json.JSONDecodeError:
+                    print(f"Skipping invalid JSON line: {line}")
+        
+        return transformed_data
+
+    def save_to_csv(self, data):
+        with open(self.output_csv_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=['data'])
+            writer.writeheader()
+            writer.writerows(data)
+
+    def process(self):
+        transformed_data = self.llama_template()
+        self.save_to_csv(transformed_data)
+        print(f"Processed data has been saved to {self.output_csv_file}")
+
+files = [
+    {'jsonl_file': 'data/train.jsonl', 'output_csv_file': 'data/train_llama_formatted.csv'},
+    {'jsonl_file': 'data/validation.jsonl', 'output_csv_file': 'data/validation_llama_formatted.csv'},
+    {'jsonl_file': 'data/test.jsonl', 'output_csv_file': 'data/test_llama_formatted.csv'}
+]
+
+for file in files:
+    transformer = DataTransformer(file['jsonl_file'], file['output_csv_file'])
+    transformer.process()
+
