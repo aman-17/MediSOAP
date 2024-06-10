@@ -1,4 +1,3 @@
-# https://github.com/krishnaik06/Finetuning-LLM/blob/main/Fine_tune_Llama_2.ipynb, https://github.com/believewhat/Dr.NoteAid, https://github.com/TheSeriousProgrammer/SimpleBitNet/tree/main, https://huggingface.co/datasets/omi-health/medical-dialogue-to-soap-summary
 import json
 import csv
 

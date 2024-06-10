@@ -87,13 +87,11 @@ def add_lora_layers(
                 add_lora_layers(module, module_names, r, lora_dropout, lora_alpha, ignore_layers)
 
 
-
-                
-                
 def unfreeze_model(model):
     for name, param in model.named_parameters():
         param.requires_grad = True
-        
+
+
 def create_linear(module):
     k, d = module.pretrained.weight.shape
     linear = nn.Linear(d, k, bias=True)
@@ -101,6 +99,7 @@ def create_linear(module):
         linear.weight.copy_(module.pretrained.weight + (module.lora_B.weight @ module.lora_A.weight) * module.scaling)
         linear.bias.copy_(module.pretrained.bias)
     return linear
+
 
 def merge_lora_layers(model, module_names: Tuple=("query", "value"), dropout=0.1):
     for module in model.modules():
@@ -112,4 +111,16 @@ def merge_lora_layers(model, module_names: Tuple=("query", "value"), dropout=0.1
             setattr(model, name, temp_linear)                  
         else:
             merge_lora_layers(module, module_names=module_names, dropout=0.1)
-                         
+
+
+class ExtendedModel(torch.nn.Module):
+    def __init__(self, base_model):
+        super().__init__()
+        self.base_model = base_model
+        self.lora = LinearLoRA(base_model.config.hidden_size, base_model.config.hidden_size, r=8, lora_alpha=16, lora_dropout=0.1)
+
+    def forward(self, input_ids, attention_mask):
+        outputs = self.base_model(input_ids=input_ids, attention_mask=attention_mask)
+        last_hidden_state = outputs.last_hidden_state
+        lora_output = self.lora(last_hidden_state)
+        return lora_output
