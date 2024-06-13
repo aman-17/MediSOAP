@@ -124,3 +124,7 @@ class ExtendedModel(torch.nn.Module):
         last_hidden_state = outputs.last_hidden_state
         lora_output = self.lora(last_hidden_state)
         return lora_output
+
+    def gradient_checkpointing_enable(self, gradient_checkpointing_kwargs=None):
+        self.base_model.gradient_checkpointing_enable(gradient_checkpointing_kwargs=gradient_checkpointing_kwargs)
+        self.lora.gradient_checkpointing_enable(gradient_checkpointing_kwargs=gradient_checkpointing_kwargs)

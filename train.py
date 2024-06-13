@@ -6,8 +6,12 @@ import torch
 from lora_scratch import LinearLoRA, freeze_model, ExtendedModel
 from trl import SFTTrainer
 
-llama_base_model = LlamaForCausalLM.from_pretrained("NousResearch/Llama-2-7b-chat-hf")
-llama_tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf")
+import os
+os.environ['HF_HOME'] = '/data1/aman/programs/'
+os.environ["TRANSFORMERS_CACHE"] = '/data1/aman/programs/'
+
+llama_base_model = LlamaForCausalLM.from_pretrained("NousResearch/Llama-2-7b-chat-hf", cache_dir='/data1/aman/programs/')
+llama_tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf", cache_dir='/data1/aman/programs/')
 llama_tokenizer.pad_token = llama_tokenizer.eos_token
 llama_tokenizer.padding_side = "right"
 
@@ -19,7 +23,7 @@ dataset_name = "mlabonne/guanaco-llama2-1k"
 new_model = "Llama-2-7b-chat-finetune"
 
 use_4bit = True
-bnb_4bit_compute_dtype = "float16"
+bnb_4bit_compute_dtype = "bfloat16"
 bnb_4bit_quant_type = "nf4"
 use_nested_quant = False
 
@@ -27,14 +31,14 @@ output_dir = "/data1/aman/programs/"
 num_train_epochs = 1
 fp16 = False
 bf16 = False
-per_device_train_batch_size = 1  
-per_device_eval_batch_size = 1  
-gradient_accumulation_steps = 4  
+per_device_train_batch_size = 0.1  
+per_device_eval_batch_size = 0.1  
+gradient_accumulation_steps = 8  
 gradient_checkpointing = True
 max_grad_norm = 0.3
 learning_rate = 2e-4
 weight_decay = 0.001
-optim = "paged_adamw_32bit"
+optim = "paged_adamw_8bit"
 lr_scheduler_type = "cosine"
 max_steps = -1
 warmup_ratio = 0.03
@@ -72,8 +76,8 @@ training_arguments = TrainingArguments(
     logging_steps=logging_steps,
     learning_rate=learning_rate,
     weight_decay=weight_decay,
-    fp16=fp16,
-    bf16=bf16,
+    # fp16=fp16,
+    # bf16=bf16,
     max_grad_norm=max_grad_norm,
     max_steps=max_steps,
     warmup_ratio=warmup_ratio,
