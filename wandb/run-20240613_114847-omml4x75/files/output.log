@@ -1,0 +1,47 @@
+
+  0%|                                                                                                                          | 0/15 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data1/aman/programs/MediSOAP/train.py", line 105, in <module>
+    trainer.train()
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 1780, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 2118, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 3036, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 3059, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 185, in forward
+    outputs = self.parallel_apply(replicas, inputs, module_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 200, in parallel_apply
+    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/parallel_apply.py", line 108, in parallel_apply
+    output.reraise()
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/_utils.py", line 722, in reraise
+    raise exception
+TypeError: Caught TypeError in replica 0 on device 0.
+Original Traceback (most recent call last):
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/parallel_apply.py", line 83, in _worker
+    output = module(*input, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ExtendedModel.forward() got an unexpected keyword argument 'labels'

@@ -1,0 +1,211 @@
+2024-06-13 11:51:02,303 INFO    StreamThr :489499 [internal.py:wandb_internal():86] W&B internal server running at pid: 489499, started at: 2024-06-13 11:51:02.302894
+2024-06-13 11:51:02,306 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: status
+2024-06-13 11:51:02,310 INFO    WriterThread:489499 [datastore.py:open_for_write():87] open: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/run-wuc7oxaa.wandb
+2024-06-13 11:51:02,311 DEBUG   SenderThread:489499 [sender.py:send():379] send: header
+2024-06-13 11:51:02,311 DEBUG   SenderThread:489499 [sender.py:send():379] send: run
+2024-06-13 11:51:02,504 INFO    SenderThread:489499 [dir_watcher.py:__init__():211] watching files in: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files
+2024-06-13 11:51:02,505 INFO    SenderThread:489499 [sender.py:_start_run_threads():1124] run started: wuc7oxaa with start time 1718297462.301898
+2024-06-13 11:51:02,509 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: check_version
+2024-06-13 11:51:02,510 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: check_version
+2024-06-13 11:51:02,588 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: run_start
+2024-06-13 11:51:02,635 DEBUG   HandlerThread:489499 [system_info.py:__init__():26] System info init
+2024-06-13 11:51:02,635 DEBUG   HandlerThread:489499 [system_info.py:__init__():41] System info init done
+2024-06-13 11:51:02,635 INFO    HandlerThread:489499 [system_monitor.py:start():194] Starting system monitor
+2024-06-13 11:51:02,635 INFO    SystemMonitor:489499 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-13 11:51:02,635 INFO    HandlerThread:489499 [system_monitor.py:probe():214] Collecting system info
+2024-06-13 11:51:02,636 INFO    SystemMonitor:489499 [interfaces.py:start():190] Started cpu monitoring
+2024-06-13 11:51:02,637 INFO    SystemMonitor:489499 [interfaces.py:start():190] Started disk monitoring
+2024-06-13 11:51:02,638 INFO    SystemMonitor:489499 [interfaces.py:start():190] Started gpu monitoring
+2024-06-13 11:51:02,640 INFO    SystemMonitor:489499 [interfaces.py:start():190] Started memory monitoring
+2024-06-13 11:51:02,642 INFO    SystemMonitor:489499 [interfaces.py:start():190] Started network monitoring
+2024-06-13 11:51:02,692 DEBUG   HandlerThread:489499 [system_info.py:probe():150] Probing system
+2024-06-13 11:51:02,695 DEBUG   HandlerThread:489499 [system_info.py:_probe_git():135] Probing git
+2024-06-13 11:51:02,703 DEBUG   HandlerThread:489499 [system_info.py:_probe_git():143] Probing git done
+2024-06-13 11:51:02,703 DEBUG   HandlerThread:489499 [system_info.py:probe():198] Probing system done
+2024-06-13 11:51:02,704 DEBUG   HandlerThread:489499 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-171-generic-x86_64-with-glibc2.31', 'python': '3.11.3', 'heartbeatAt': '2024-06-13T16:51:02.692493', 'startedAt': '2024-06-13T16:51:02.298882', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data1/aman/programs/MediSOAP/train2.py', 'codePathLocal': 'train2.py', 'codePath': 'train2.py', 'git': {'remote': 'https://github.com/aman-17/MediSOAP.git', 'commit': '06398df09546a66569d3621ce7d77ba332211493'}, 'email': 'amanrangapur@gmail.com', 'root': '/data1/aman/programs/MediSOAP', 'host': 'sn4622125181', 'username': 'aman1', 'executable': '/data1/aman/miniconda3/part/bin/python', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 1746.532364583334, 'min': 1500.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1499.747, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.298, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.045, 'min': 1500.0, 'max': 2300.0}, {'current': 1800.629, 'min': 1500.0, 'max': 2300.0}, {'current': 1391.083, 'min': 1500.0, 'max': 2300.0}, {'current': 1476.816, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.891, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.158, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.03, 'min': 1500.0, 'max': 2300.0}, {'current': 3085.822, 'min': 1500.0, 'max': 2300.0}, {'current': 1388.367, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.467, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.036, 'min': 1500.0, 'max': 2300.0}, {'current': 3119.081, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.878, 'min': 1500.0, 'max': 2300.0}, {'current': 3094.196, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.379, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.931, 'min': 1500.0, 'max': 2300.0}, {'current': 1466.834, 'min': 1500.0, 'max': 2300.0}, {'current': 1472.417, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.108, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.468, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.656, 'min': 1500.0, 'max': 2300.0}, {'current': 1370.56, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.05, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.41, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.51, 'min': 1500.0, 'max': 2300.0}, {'current': 3134.908, 'min': 1500.0, 'max': 2300.0}, {'current': 1395.777, 'min': 1500.0, 'max': 2300.0}, {'current': 1386.838, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.352, 'min': 1500.0, 'max': 2300.0}, {'current': 3119.942, 'min': 1500.0, 'max': 2300.0}, {'current': 2759.522, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.073, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.697, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.908, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.681, 'min': 1500.0, 'max': 2300.0}, {'current': 1503.447, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.176, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.765, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.112, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.602, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.095, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.574, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.643, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.868, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.996, 'min': 1500.0, 'max': 2300.0}, {'current': 1493.308, 'min': 1500.0, 'max': 2300.0}, {'current': 1391.245, 'min': 1500.0, 'max': 2300.0}, {'current': 1397.55, 'min': 1500.0, 'max': 2300.0}, {'current': 1395.588, 'min': 1500.0, 'max': 2300.0}, {'current': 2083.556, 'min': 1500.0, 'max': 2300.0}, {'current': 1384.095, 'min': 1500.0, 'max': 2300.0}, {'current': 1450.963, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.226, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.796, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.795, 'min': 1500.0, 'max': 2300.0}, {'current': 3125.488, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.377, 'min': 1500.0, 'max': 2300.0}, {'current': 1386.961, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.26, 'min': 1500.0, 'max': 2300.0}, {'current': 3094.18, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.934, 'min': 1500.0, 'max': 2300.0}, {'current': 2572.137, 'min': 1500.0, 'max': 2300.0}, {'current': 1388.206, 'min': 1500.0, 'max': 2300.0}, {'current': 1320.718, 'min': 1500.0, 'max': 2300.0}, {'current': 1390.267, 'min': 1500.0, 'max': 2300.0}, {'current': 1398.329, 'min': 1500.0, 'max': 2300.0}, {'current': 1392.682, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.816, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.028, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.319, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.623, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.489, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.566, 'min': 1500.0, 'max': 2300.0}, {'current': 3122.13, 'min': 1500.0, 'max': 2300.0}, {'current': 1391.039, 'min': 1500.0, 'max': 2300.0}, {'current': 1396.039, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.96, 'min': 1500.0, 'max': 2300.0}, {'current': 3120.481, 'min': 1500.0, 'max': 2300.0}, {'current': 3071.082, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.881, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.226, 'min': 1500.0, 'max': 2300.0}, {'current': 1443.899, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.087, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.737, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.753, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.951, 'min': 1500.0, 'max': 2300.0}, {'current': 1492.513, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.179, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.319, 'min': 1500.0, 'max': 2300.0}, {'current': 1495.905, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.368, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.308, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.908, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.475, 'min': 1500.0, 'max': 2300.0}], 'disk': {'/': {'total': 867.7938766479492, 'used': 808.8855743408203}}, 'gpu': 'NVIDIA RTX A5000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}], 'memory': {'total': 251.74067306518555}}
+2024-06-13 11:51:02,704 INFO    HandlerThread:489499 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-13 11:51:02,704 INFO    HandlerThread:489499 [system_monitor.py:probe():227] Publishing system info
+2024-06-13 11:51:02,704 DEBUG   HandlerThread:489499 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-13 11:51:02,705 ERROR   HandlerThread:489499 [system_info.py:_save_conda():221] Error saving conda packages: [Errno 2] No such file or directory: 'conda'
+Traceback (most recent call last):
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/wandb/sdk/internal/system/system_info.py", line 214, in _save_conda
+    subprocess.call(
+  File "/data1/aman/miniconda3/part/lib/python3.11/subprocess.py", line 389, in call
+    with Popen(*popenargs, **kwargs) as p:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/subprocess.py", line 1024, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/data1/aman/miniconda3/part/lib/python3.11/subprocess.py", line 1917, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2024-06-13 11:51:02,707 DEBUG   HandlerThread:489499 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-13 11:51:02,709 INFO    HandlerThread:489499 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-13 11:51:02,712 DEBUG   SenderThread:489499 [sender.py:send():379] send: files
+2024-06-13 11:51:02,712 INFO    SenderThread:489499 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-13 11:51:02,789 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-13 11:51:02,789 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-13 11:51:02,790 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: python_packages
+2024-06-13 11:51:02,791 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: stop_status
+2024-06-13 11:51:02,794 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-13 11:51:02,867 DEBUG   SenderThread:489499 [sender.py:send():379] send: telemetry
+2024-06-13 11:51:02,868 DEBUG   SenderThread:489499 [sender.py:send():379] send: config
+2024-06-13 11:51:02,869 DEBUG   SenderThread:489499 [sender.py:send():379] send: metric
+2024-06-13 11:51:02,869 DEBUG   SenderThread:489499 [sender.py:send():379] send: telemetry
+2024-06-13 11:51:02,869 DEBUG   SenderThread:489499 [sender.py:send():379] send: metric
+2024-06-13 11:51:02,869 WARNING SenderThread:489499 [sender.py:send_metric():1341] Seen metric with glob (shouldn't happen)
+2024-06-13 11:51:02,869 DEBUG   SenderThread:489499 [sender.py:send():379] send: telemetry
+2024-06-13 11:51:02,963 INFO    wandb-upload_0:489499 [upload_job.py:push():131] Uploaded file /tmp/tmpg0tr64wbwandb/6w2p84we-wandb-metadata.json
+2024-06-13 11:51:03,506 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/conda-environment.yaml
+2024-06-13 11:51:03,506 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/requirements.txt
+2024-06-13 11:51:03,506 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:03,506 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-metadata.json
+2024-06-13 11:51:05,506 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:07,874 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: status_report
+2024-06-13 11:51:12,875 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: status_report
+2024-06-13 11:51:15,510 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:16,243 DEBUG   SenderThread:489499 [sender.py:send():379] send: exit
+2024-06-13 11:51:16,243 INFO    SenderThread:489499 [sender.py:send_exit():586] handling exit code: 1
+2024-06-13 11:51:16,243 INFO    SenderThread:489499 [sender.py:send_exit():588] handling runtime: 13
+2024-06-13 11:51:16,243 INFO    SenderThread:489499 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-13 11:51:16,244 INFO    SenderThread:489499 [sender.py:send_exit():594] send defer
+2024-06-13 11:51:16,244 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:16,244 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-13 11:51:16,244 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:16,244 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-13 11:51:16,244 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 1
+2024-06-13 11:51:16,245 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:16,245 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-13 11:51:16,245 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:16,245 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-13 11:51:16,245 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 2
+2024-06-13 11:51:16,245 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:16,245 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-13 11:51:16,245 INFO    HandlerThread:489499 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-13 11:51:16,246 INFO    HandlerThread:489499 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-13 11:51:16,247 DEBUG   SystemMonitor:489499 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-13 11:51:16,247 DEBUG   SystemMonitor:489499 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-13 11:51:16,247 DEBUG   SystemMonitor:489499 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-13 11:51:16,249 INFO    HandlerThread:489499 [interfaces.py:finish():202] Joined disk monitor
+2024-06-13 11:51:16,510 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-summary.json
+2024-06-13 11:51:17,446 INFO    HandlerThread:489499 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-13 11:51:17,447 INFO    HandlerThread:489499 [interfaces.py:finish():202] Joined memory monitor
+2024-06-13 11:51:17,447 INFO    HandlerThread:489499 [interfaces.py:finish():202] Joined network monitor
+2024-06-13 11:51:17,447 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-13 11:51:17,448 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,449 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-13 11:51:17,449 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 3
+2024-06-13 11:51:17,449 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:17,450 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-13 11:51:17,450 DEBUG   SenderThread:489499 [sender.py:send():379] send: stats
+2024-06-13 11:51:17,451 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: poll_exit
+2024-06-13 11:51:17,452 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,452 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-13 11:51:17,452 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 4
+2024-06-13 11:51:17,452 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:17,453 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-13 11:51:17,453 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,453 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-13 11:51:17,453 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 5
+2024-06-13 11:51:17,453 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:17,454 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-13 11:51:17,454 DEBUG   SenderThread:489499 [sender.py:send():379] send: summary
+2024-06-13 11:51:17,455 INFO    SenderThread:489499 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-13 11:51:17,455 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,455 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-13 11:51:17,455 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 6
+2024-06-13 11:51:17,456 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:17,456 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-13 11:51:17,456 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,456 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-13 11:51:17,461 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: status_report
+2024-06-13 11:51:17,511 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-summary.json
+2024-06-13 11:51:17,511 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:17,590 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 7
+2024-06-13 11:51:17,590 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:17,590 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-13 11:51:17,590 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:17,590 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-13 11:51:18,242 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-13 11:51:18,511 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/config.yaml
+2024-06-13 11:51:18,896 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 8
+2024-06-13 11:51:18,896 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: poll_exit
+2024-06-13 11:51:18,896 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:18,896 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-13 11:51:18,897 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:18,897 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-13 11:51:18,897 INFO    SenderThread:489499 [job_builder.py:build():318] Attempting to build job artifact
+2024-06-13 11:51:18,899 INFO    SenderThread:489499 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-06-13 11:51:18,920 INFO    SenderThread:489499 [job_builder.py:build():431] adding wandb-job metadata file
+2024-06-13 11:51:18,924 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 9
+2024-06-13 11:51:18,925 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:18,925 DEBUG   SenderThread:489499 [sender.py:send():379] send: artifact
+2024-06-13 11:51:18,925 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-13 11:51:19,243 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-13 11:51:19,250 INFO    wandb-upload_0:489499 [upload_job.py:push():89] Uploaded file /tmp/tmpsncvthdv/wandb-job.json
+2024-06-13 11:51:19,299 INFO    wandb-upload_1:489499 [upload_job.py:push():89] Uploaded file /home/aman1/.local/share/wandb/artifacts/staging/tmpj8ga9b6z
+2024-06-13 11:51:19,512 INFO    Thread-12 :489499 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:19,691 INFO    SenderThread:489499 [sender.py:send_artifact():1468] sent artifact job-https___github.com_aman-17_MediSOAP.git_train2.py - {'id': 'QXJ0aWZhY3Q6ODczNjE3Nzcy', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4OTA1MTExOA==', 'latestArtifact': None}}
+2024-06-13 11:51:19,691 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:19,691 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-13 11:51:19,691 INFO    SenderThread:489499 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-13 11:51:20,512 INFO    SenderThread:489499 [dir_watcher.py:finish():388] scan: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files
+2024-06-13 11:51:20,513 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/conda-environment.yaml conda-environment.yaml
+2024-06-13 11:51:20,513 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log output.log
+2024-06-13 11:51:20,513 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-summary.json wandb-summary.json
+2024-06-13 11:51:20,513 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/requirements.txt requirements.txt
+2024-06-13 11:51:20,516 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-metadata.json wandb-metadata.json
+2024-06-13 11:51:20,516 INFO    SenderThread:489499 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/config.yaml config.yaml
+2024-06-13 11:51:20,516 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 10
+2024-06-13 11:51:20,517 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: poll_exit
+2024-06-13 11:51:20,517 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:20,517 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-13 11:51:20,517 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:20,518 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-13 11:51:20,518 INFO    SenderThread:489499 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-13 11:51:20,680 INFO    wandb-upload_0:489499 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/output.log
+2024-06-13 11:51:20,750 INFO    wandb-upload_1:489499 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/requirements.txt
+2024-06-13 11:51:20,816 INFO    wandb-upload_2:489499 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/wandb-summary.json
+2024-06-13 11:51:20,856 INFO    wandb-upload_3:489499 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/files/config.yaml
+2024-06-13 11:51:21,056 INFO    Thread-11 (_thread_body):489499 [sender.py:transition_state():614] send defer: 11
+2024-06-13 11:51:21,056 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:21,056 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-13 11:51:21,057 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:21,057 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-13 11:51:21,057 INFO    SenderThread:489499 [file_pusher.py:join():178] waiting for file pusher
+2024-06-13 11:51:21,058 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 12
+2024-06-13 11:51:21,058 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:21,058 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-13 11:51:21,058 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:21,058 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-13 11:51:21,058 INFO    SenderThread:489499 [file_stream.py:finish():614] file stream finish called
+2024-06-13 11:51:21,090 INFO    SenderThread:489499 [file_stream.py:finish():618] file stream finish is done
+2024-06-13 11:51:21,090 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 13
+2024-06-13 11:51:21,090 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:21,090 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-13 11:51:21,091 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:21,091 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-13 11:51:21,091 INFO    SenderThread:489499 [sender.py:transition_state():614] send defer: 14
+2024-06-13 11:51:21,091 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: defer
+2024-06-13 11:51:21,091 INFO    HandlerThread:489499 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-13 11:51:21,092 DEBUG   SenderThread:489499 [sender.py:send():379] send: final
+2024-06-13 11:51:21,092 DEBUG   SenderThread:489499 [sender.py:send():379] send: footer
+2024-06-13 11:51:21,092 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: defer
+2024-06-13 11:51:21,092 INFO    SenderThread:489499 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-13 11:51:21,093 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-13 11:51:21,093 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: poll_exit
+2024-06-13 11:51:21,094 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-13 11:51:21,094 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: poll_exit
+2024-06-13 11:51:21,095 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: server_info
+2024-06-13 11:51:21,095 DEBUG   SenderThread:489499 [sender.py:send_request():406] send_request: server_info
+2024-06-13 11:51:21,095 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-13 11:51:21,098 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-13 11:51:21,098 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-13 11:51:21,132 INFO    MainThread:489499 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-06-13 11:51:21,132 INFO    MainThread:489499 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-06-13 11:51:21,132 INFO    MainThread:489499 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-06-13 11:51:21,133 DEBUG   HandlerThread:489499 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-13 11:51:21,133 INFO    HandlerThread:489499 [handler.py:finish():866] shutting down handler
+2024-06-13 11:51:22,095 INFO    WriterThread:489499 [datastore.py:close():296] close: /data1/aman/programs/MediSOAP/wandb/run-20240613_115102-wuc7oxaa/run-wuc7oxaa.wandb
+2024-06-13 11:51:22,132 INFO    SenderThread:489499 [sender.py:finish():1546] shutting down sender
+2024-06-13 11:51:22,132 INFO    SenderThread:489499 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-13 11:51:22,132 INFO    SenderThread:489499 [file_pusher.py:join():178] waiting for file pusher

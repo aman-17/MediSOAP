@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+
+
+
+  1%|█▎                                                                                                                                               | 25/2900 [00:25<38:08,  1.26it/s]
+
+
+
+
+
+
+
+  2%|██▏                                                                                                                                              | 44/2900 [00:40<35:54,  1.33it/s]Traceback (most recent call last):
+  File "/data1/aman/programs/MediSOAP/train_phi2.py", line 112, in <module>
+    trainer.train()
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/trl/trainer/sft_trainer.py", line 440, in train
+    output = super().train(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 1780, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 2118, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 3036, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/transformers/trainer.py", line 3059, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 184, in forward
+    replicas = self.replicate(self.module, self.device_ids[:len(inputs)])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 189, in replicate
+    return replicate(module, device_ids, not torch.is_grad_enabled())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/replicate.py", line 110, in replicate
+    param_copies = _broadcast_coalesced_reshape(params, devices, detach)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/replicate.py", line 83, in _broadcast_coalesced_reshape
+    tensor_copies = Broadcast.apply(devices, *tensors)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/autograd/function.py", line 553, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/_functions.py", line 23, in forward
+    outputs = comm.broadcast_coalesced(inputs, ctx.target_gpus)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/aman/miniconda3/part/lib/python3.11/site-packages/torch/nn/parallel/comm.py", line 57, in broadcast_coalesced
+    return torch._C._broadcast_coalesced(tensors, devices, buffer_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

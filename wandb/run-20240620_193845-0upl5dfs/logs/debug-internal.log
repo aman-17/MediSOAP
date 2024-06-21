@@ -1,0 +1,318 @@
+2024-06-20 19:38:45,421 INFO    StreamThr :905781 [internal.py:wandb_internal():86] W&B internal server running at pid: 905781, started at: 2024-06-20 19:38:45.420266
+2024-06-20 19:38:45,423 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status
+2024-06-20 19:38:45,426 INFO    WriterThread:905781 [datastore.py:open_for_write():87] open: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/run-0upl5dfs.wandb
+2024-06-20 19:38:45,428 DEBUG   SenderThread:905781 [sender.py:send():379] send: header
+2024-06-20 19:38:45,428 DEBUG   SenderThread:905781 [sender.py:send():379] send: run
+2024-06-20 19:38:45,568 INFO    SenderThread:905781 [dir_watcher.py:__init__():211] watching files in: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files
+2024-06-20 19:38:45,568 INFO    SenderThread:905781 [sender.py:_start_run_threads():1124] run started: 0upl5dfs with start time 1718930325.419701
+2024-06-20 19:38:45,579 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: check_version
+2024-06-20 19:38:45,579 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: check_version
+2024-06-20 19:38:45,627 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: run_start
+2024-06-20 19:38:45,671 DEBUG   HandlerThread:905781 [system_info.py:__init__():26] System info init
+2024-06-20 19:38:45,671 DEBUG   HandlerThread:905781 [system_info.py:__init__():41] System info init done
+2024-06-20 19:38:45,671 INFO    HandlerThread:905781 [system_monitor.py:start():194] Starting system monitor
+2024-06-20 19:38:45,672 INFO    SystemMonitor:905781 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-20 19:38:45,672 INFO    HandlerThread:905781 [system_monitor.py:probe():214] Collecting system info
+2024-06-20 19:38:45,673 INFO    SystemMonitor:905781 [interfaces.py:start():190] Started cpu monitoring
+2024-06-20 19:38:45,674 INFO    SystemMonitor:905781 [interfaces.py:start():190] Started disk monitoring
+2024-06-20 19:38:45,676 INFO    SystemMonitor:905781 [interfaces.py:start():190] Started gpu monitoring
+2024-06-20 19:38:45,677 INFO    SystemMonitor:905781 [interfaces.py:start():190] Started memory monitoring
+2024-06-20 19:38:45,678 INFO    SystemMonitor:905781 [interfaces.py:start():190] Started network monitoring
+2024-06-20 19:38:45,728 DEBUG   HandlerThread:905781 [system_info.py:probe():150] Probing system
+2024-06-20 19:38:45,731 DEBUG   HandlerThread:905781 [system_info.py:_probe_git():135] Probing git
+2024-06-20 19:38:45,739 DEBUG   HandlerThread:905781 [system_info.py:_probe_git():143] Probing git done
+2024-06-20 19:38:45,740 DEBUG   HandlerThread:905781 [system_info.py:probe():198] Probing system done
+2024-06-20 19:38:45,740 DEBUG   HandlerThread:905781 [system_monitor.py:probe():223] {'os': 'Linux-5.4.0-171-generic-x86_64-with-glibc2.31', 'python': '3.11.3', 'heartbeatAt': '2024-06-21T00:38:45.728862', 'startedAt': '2024-06-21T00:38:45.415830', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/data1/aman/programs/MediSOAP/train_phi2.py', 'codePathLocal': 'train_phi2.py', 'codePath': 'train_phi2.py', 'git': {'remote': 'https://github.com/aman-17/MediSOAP.git', 'commit': '06398df09546a66569d3621ce7d77ba332211493'}, 'email': 'amanrangapur@gmail.com', 'root': '/data1/aman/programs/MediSOAP', 'host': 'sn4622125181', 'username': 'aman1', 'executable': '/data1/aman/miniconda3/part/bin/python3', 'cpu_count': 48, 'cpu_count_logical': 96, 'cpu_freq': {'current': 1902.7253854166665, 'min': 1500.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1499.823, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.689, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.843, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.352, 'min': 1500.0, 'max': 2300.0}, {'current': 3107.008, 'min': 1500.0, 'max': 2300.0}, {'current': 1388.433, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.951, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.923, 'min': 1500.0, 'max': 2300.0}, {'current': 3107.836, 'min': 1500.0, 'max': 2300.0}, {'current': 3127.322, 'min': 1500.0, 'max': 2300.0}, {'current': 1379.51, 'min': 1500.0, 'max': 2300.0}, {'current': 1303.926, 'min': 1500.0, 'max': 2300.0}, {'current': 1793.86, 'min': 1500.0, 'max': 2300.0}, {'current': 2153.04, 'min': 1500.0, 'max': 2300.0}, {'current': 1396.773, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.853, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.891, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.285, 'min': 1500.0, 'max': 2300.0}, {'current': 1697.781, 'min': 1500.0, 'max': 2300.0}, {'current': 1441.79, 'min': 1500.0, 'max': 2300.0}, {'current': 1476.901, 'min': 1500.0, 'max': 2300.0}, {'current': 1974.716, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.736, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.436, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.959, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.203, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.927, 'min': 1500.0, 'max': 2300.0}, {'current': 3130.504, 'min': 1500.0, 'max': 2300.0}, {'current': 1400.062, 'min': 1500.0, 'max': 2300.0}, {'current': 1391.552, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.418, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.555, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.248, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.587, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.074, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.169, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.294, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.123, 'min': 1500.0, 'max': 2300.0}, {'current': 1495.225, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.053, 'min': 1500.0, 'max': 2300.0}, {'current': 1500.177, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.618, 'min': 1500.0, 'max': 2300.0}, {'current': 3092.581, 'min': 1500.0, 'max': 2300.0}, {'current': 1401.411, 'min': 1500.0, 'max': 2300.0}, {'current': 1397.454, 'min': 1500.0, 'max': 2300.0}, {'current': 1489.171, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.201, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.542, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.854, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.321, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.903, 'min': 1500.0, 'max': 2300.0}, {'current': 1388.543, 'min': 1500.0, 'max': 2300.0}, {'current': 3124.706, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.426, 'min': 1500.0, 'max': 2300.0}, {'current': 1387.541, 'min': 1500.0, 'max': 2300.0}, {'current': 1380.085, 'min': 1500.0, 'max': 2300.0}, {'current': 3127.524, 'min': 1500.0, 'max': 2300.0}, {'current': 3108.272, 'min': 1500.0, 'max': 2300.0}, {'current': 1386.58, 'min': 1500.0, 'max': 2300.0}, {'current': 1388.393, 'min': 1500.0, 'max': 2300.0}, {'current': 1719.146, 'min': 1500.0, 'max': 2300.0}, {'current': 2432.267, 'min': 1500.0, 'max': 2300.0}, {'current': 1392.163, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.409, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.35, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.652, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.357, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.897, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.896, 'min': 1500.0, 'max': 2300.0}, {'current': 1676.381, 'min': 1500.0, 'max': 2300.0}, {'current': 1409.674, 'min': 1500.0, 'max': 2300.0}, {'current': 1438.19, 'min': 1500.0, 'max': 2300.0}, {'current': 1465.553, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.773, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.437, 'min': 1500.0, 'max': 2300.0}, {'current': 3121.493, 'min': 1500.0, 'max': 2300.0}, {'current': 1390.206, 'min': 1500.0, 'max': 2300.0}, {'current': 1398.746, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.416, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.504, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.595, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.107, 'min': 1500.0, 'max': 2300.0}, {'current': 1496.038, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.18, 'min': 1500.0, 'max': 2300.0}, {'current': 1454.273, 'min': 1500.0, 'max': 2300.0}, {'current': 1497.398, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.068, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.269, 'min': 1500.0, 'max': 2300.0}, {'current': 1392.367, 'min': 1500.0, 'max': 2300.0}, {'current': 1498.835, 'min': 1500.0, 'max': 2300.0}, {'current': 3120.141, 'min': 1500.0, 'max': 2300.0}, {'current': 1396.049, 'min': 1500.0, 'max': 2300.0}, {'current': 1397.711, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.686, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.341, 'min': 1500.0, 'max': 2300.0}, {'current': 1499.021, 'min': 1500.0, 'max': 2300.0}], 'disk': {'/': {'total': 867.7938766479492, 'used': 810.0513381958008}}, 'gpu': 'NVIDIA RTX A5000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25757220864}], 'memory': {'total': 251.74067306518555}}
+2024-06-20 19:38:45,740 INFO    HandlerThread:905781 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-20 19:38:45,740 INFO    HandlerThread:905781 [system_monitor.py:probe():227] Publishing system info
+2024-06-20 19:38:45,740 DEBUG   HandlerThread:905781 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-20 19:38:46,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/conda-environment.yaml
+2024-06-20 19:38:48,361 DEBUG   HandlerThread:905781 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-20 19:38:48,362 INFO    HandlerThread:905781 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-20 19:38:48,365 DEBUG   SenderThread:905781 [sender.py:send():379] send: files
+2024-06-20 19:38:48,366 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-20 19:38:48,453 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-20 19:38:48,454 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: python_packages
+2024-06-20 19:38:48,454 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:38:48,455 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:38:48,458 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:38:48,500 DEBUG   SenderThread:905781 [sender.py:send():379] send: telemetry
+2024-06-20 19:38:48,500 DEBUG   SenderThread:905781 [sender.py:send():379] send: config
+2024-06-20 19:38:48,501 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:38:48,502 DEBUG   SenderThread:905781 [sender.py:send():379] send: telemetry
+2024-06-20 19:38:48,502 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:38:48,502 WARNING SenderThread:905781 [sender.py:send_metric():1341] Seen metric with glob (shouldn't happen)
+2024-06-20 19:38:48,502 DEBUG   SenderThread:905781 [sender.py:send():379] send: telemetry
+2024-06-20 19:38:48,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/conda-environment.yaml
+2024-06-20 19:38:48,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:38:48,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-metadata.json
+2024-06-20 19:38:48,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/requirements.txt
+2024-06-20 19:38:48,588 INFO    wandb-upload_0:905781 [upload_job.py:push():131] Uploaded file /tmp/tmpaswn_5zdwandb/scmkrtv9-wandb-metadata.json
+2024-06-20 19:38:50,508 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:38:50,570 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:38:54,572 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:38:56,151 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:38:56,573 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:38:58,574 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:00,383 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:00,386 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:39:00,386 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:39:00,386 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:39:00,386 DEBUG   SenderThread:905781 [sender.py:send():379] send: metric
+2024-06-20 19:39:00,386 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:00,387 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:00,388 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:00,575 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:00,576 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_created():271] file/dir created: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:01,733 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:02,576 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:03,457 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:39:03,457 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:39:03,458 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:39:04,577 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:06,578 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:07,225 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:07,226 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:07,227 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:07,228 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:07,228 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:07,578 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:08,579 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:10,581 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:12,582 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:12,617 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:13,942 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:13,944 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:13,944 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:13,945 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:14,583 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:14,583 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:16,584 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:18,044 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:18,456 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:39:18,458 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:39:18,458 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:39:18,586 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:18,587 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/config.yaml
+2024-06-20 19:39:20,586 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:20,784 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:20,786 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:20,786 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:20,787 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:21,587 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:22,587 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:23,488 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:24,589 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:26,590 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:27,723 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:27,724 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:27,724 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:27,725 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:28,591 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:28,591 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:29,075 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:30,592 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:32,592 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:33,456 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:39:33,457 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:39:33,459 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:39:34,512 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:34,513 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:34,514 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:34,515 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:34,515 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:34,593 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:34,594 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:36,594 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:38,595 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:40,003 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:40,596 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:41,340 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:41,341 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:41,342 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:41,342 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:41,597 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:42,597 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:44,598 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:45,439 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:45,678 DEBUG   SystemMonitor:905781 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-20 19:39:45,684 DEBUG   SenderThread:905781 [sender.py:send():379] send: stats
+2024-06-20 19:39:46,599 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:48,098 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:48,100 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:48,101 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:48,101 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:48,456 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:39:48,457 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:39:48,460 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:39:48,600 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:48,600 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:50,601 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:53,054 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:54,602 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:54,904 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:39:54,906 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:39:54,906 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:39:54,906 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:39:55,603 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:39:56,603 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:39:58,278 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:39:58,604 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:00,605 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:01,711 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: partial_history
+2024-06-20 19:40:01,712 DEBUG   SenderThread:905781 [sender.py:send():379] send: history
+2024-06-20 19:40:01,712 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: summary_record
+2024-06-20 19:40:01,713 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:40:02,606 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:02,606 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:40:03,457 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:40:03,458 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-20 19:40:03,459 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: stop_status
+2024-06-20 19:40:03,548 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:40:04,607 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:06,608 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:08,485 DEBUG   SenderThread:905781 [sender.py:send():379] send: exit
+2024-06-20 19:40:08,485 INFO    SenderThread:905781 [sender.py:send_exit():586] handling exit code: 255
+2024-06-20 19:40:08,485 INFO    SenderThread:905781 [sender.py:send_exit():588] handling runtime: 82
+2024-06-20 19:40:08,486 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:40:08,486 INFO    SenderThread:905781 [sender.py:send_exit():594] send defer
+2024-06-20 19:40:08,486 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:08,486 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-20 19:40:08,487 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:08,487 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-20 19:40:08,487 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 1
+2024-06-20 19:40:08,487 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:08,487 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-20 19:40:08,487 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:08,487 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-20 19:40:08,487 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 2
+2024-06-20 19:40:08,488 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:08,488 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-20 19:40:08,488 INFO    HandlerThread:905781 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-20 19:40:08,488 DEBUG   SystemMonitor:905781 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-20 19:40:08,488 DEBUG   SystemMonitor:905781 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-20 19:40:08,492 INFO    HandlerThread:905781 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-20 19:40:08,492 INFO    HandlerThread:905781 [interfaces.py:finish():202] Joined disk monitor
+2024-06-20 19:40:08,609 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:08,609 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:40:09,630 INFO    HandlerThread:905781 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-20 19:40:09,630 INFO    HandlerThread:905781 [interfaces.py:finish():202] Joined memory monitor
+2024-06-20 19:40:09,630 INFO    HandlerThread:905781 [interfaces.py:finish():202] Joined network monitor
+2024-06-20 19:40:09,631 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-20 19:40:09,631 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,631 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:40:09,632 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-20 19:40:09,632 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 3
+2024-06-20 19:40:09,632 DEBUG   SenderThread:905781 [sender.py:send():379] send: stats
+2024-06-20 19:40:09,634 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: poll_exit
+2024-06-20 19:40:09,634 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:09,634 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-20 19:40:09,635 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,635 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-20 19:40:09,635 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 4
+2024-06-20 19:40:09,635 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:09,635 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-20 19:40:09,636 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,636 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-20 19:40:09,636 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 5
+2024-06-20 19:40:09,636 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:09,636 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-20 19:40:09,636 DEBUG   SenderThread:905781 [sender.py:send():379] send: summary
+2024-06-20 19:40:09,637 INFO    SenderThread:905781 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-20 19:40:09,637 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,637 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-20 19:40:09,637 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 6
+2024-06-20 19:40:09,637 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:09,638 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-20 19:40:09,638 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,638 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-20 19:40:09,638 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 7
+2024-06-20 19:40:09,638 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: status_report
+2024-06-20 19:40:09,638 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:09,638 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-20 19:40:09,639 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:09,639 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-20 19:40:10,486 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-20 19:40:10,609 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:10,610 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:40:12,411 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 8
+2024-06-20 19:40:12,411 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: poll_exit
+2024-06-20 19:40:12,412 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:12,412 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-20 19:40:12,412 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:12,412 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-20 19:40:12,412 INFO    SenderThread:905781 [job_builder.py:build():318] Attempting to build job artifact
+2024-06-20 19:40:12,414 INFO    SenderThread:905781 [job_builder.py:_get_source_type():455] is repo sourced job
+2024-06-20 19:40:12,436 INFO    SenderThread:905781 [job_builder.py:build():431] adding wandb-job metadata file
+2024-06-20 19:40:12,440 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 9
+2024-06-20 19:40:12,440 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:12,440 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-20 19:40:12,440 DEBUG   SenderThread:905781 [sender.py:send():379] send: artifact
+2024-06-20 19:40:12,487 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-20 19:40:12,610 INFO    Thread-12 :905781 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:12,647 INFO    SenderThread:905781 [sender.py:send_artifact():1468] sent artifact job-https___github.com_aman-17_MediSOAP.git_train_phi2.py - {'id': 'QXJ0aWZhY3Q6OTA0MDgyOTg3', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4OTA5NDg3Mw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6OTA0MDgyOTg3', 'versionIndex': 2}}}
+2024-06-20 19:40:12,647 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:12,647 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-20 19:40:12,647 INFO    SenderThread:905781 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-20 19:40:13,611 INFO    SenderThread:905781 [dir_watcher.py:finish():388] scan: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files
+2024-06-20 19:40:13,611 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/conda-environment.yaml conda-environment.yaml
+2024-06-20 19:40:13,611 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log output.log
+2024-06-20 19:40:13,612 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json wandb-summary.json
+2024-06-20 19:40:13,612 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/requirements.txt requirements.txt
+2024-06-20 19:40:13,612 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-metadata.json wandb-metadata.json
+2024-06-20 19:40:13,616 INFO    SenderThread:905781 [dir_watcher.py:finish():402] scan save: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/config.yaml config.yaml
+2024-06-20 19:40:13,620 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 10
+2024-06-20 19:40:13,620 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: poll_exit
+2024-06-20 19:40:13,621 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:13,621 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-20 19:40:13,622 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:13,622 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-20 19:40:13,622 INFO    SenderThread:905781 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-20 19:40:13,765 INFO    wandb-upload_1:905781 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/conda-environment.yaml
+2024-06-20 19:40:13,852 INFO    wandb-upload_0:905781 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/output.log
+2024-06-20 19:40:13,897 INFO    wandb-upload_3:905781 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/requirements.txt
+2024-06-20 19:40:13,898 INFO    wandb-upload_4:905781 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/config.yaml
+2024-06-20 19:40:13,900 INFO    wandb-upload_2:905781 [upload_job.py:push():131] Uploaded file /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/files/wandb-summary.json
+2024-06-20 19:40:14,101 INFO    Thread-11 (_thread_body):905781 [sender.py:transition_state():614] send defer: 11
+2024-06-20 19:40:14,101 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:14,101 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-20 19:40:14,102 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:14,102 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-20 19:40:14,102 INFO    SenderThread:905781 [file_pusher.py:join():178] waiting for file pusher
+2024-06-20 19:40:14,103 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 12
+2024-06-20 19:40:14,103 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:14,103 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-20 19:40:14,103 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:14,103 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-20 19:40:14,103 INFO    SenderThread:905781 [file_stream.py:finish():614] file stream finish called
+2024-06-20 19:40:14,324 INFO    SenderThread:905781 [file_stream.py:finish():618] file stream finish is done
+2024-06-20 19:40:14,324 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 13
+2024-06-20 19:40:14,324 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:14,324 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-20 19:40:14,324 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:14,324 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-20 19:40:14,324 INFO    SenderThread:905781 [sender.py:transition_state():614] send defer: 14
+2024-06-20 19:40:14,325 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: defer
+2024-06-20 19:40:14,325 INFO    HandlerThread:905781 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-20 19:40:14,325 DEBUG   SenderThread:905781 [sender.py:send():379] send: final
+2024-06-20 19:40:14,325 DEBUG   SenderThread:905781 [sender.py:send():379] send: footer
+2024-06-20 19:40:14,326 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: defer
+2024-06-20 19:40:14,326 INFO    SenderThread:905781 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-20 19:40:14,326 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-20 19:40:14,327 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: poll_exit
+2024-06-20 19:40:14,327 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-20 19:40:14,328 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: poll_exit
+2024-06-20 19:40:14,328 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: server_info
+2024-06-20 19:40:14,329 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-20 19:40:14,329 DEBUG   SenderThread:905781 [sender.py:send_request():406] send_request: server_info
+2024-06-20 19:40:14,332 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-20 19:40:14,333 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-20 19:40:14,369 INFO    MainThread:905781 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-06-20 19:40:14,370 INFO    MainThread:905781 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-06-20 19:40:14,370 INFO    MainThread:905781 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-06-20 19:40:14,371 DEBUG   HandlerThread:905781 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-20 19:40:14,371 INFO    HandlerThread:905781 [handler.py:finish():866] shutting down handler
+2024-06-20 19:40:15,329 INFO    WriterThread:905781 [datastore.py:close():296] close: /data1/aman/programs/MediSOAP/wandb/run-20240620_193845-0upl5dfs/run-0upl5dfs.wandb
+2024-06-20 19:40:15,369 INFO    SenderThread:905781 [sender.py:finish():1546] shutting down sender
+2024-06-20 19:40:15,369 INFO    SenderThread:905781 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-20 19:40:15,370 INFO    SenderThread:905781 [file_pusher.py:join():178] waiting for file pusher
