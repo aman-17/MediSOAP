@@ -1,0 +1,3 @@
+data/*.jsonl
+__pycache__/
+wandb/
