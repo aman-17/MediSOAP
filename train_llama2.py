@@ -1,26 +1,46 @@
-from transformers import AutoTokenizer, LlamaForCausalLM
+import math
+from typing import List, Tuple
+
+from datasets import Dataset
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from transformers import AutoTokenizer, LlamaForCausalLM, AutoModelForCausalLM
 from transformers import AutoTokenizer, BitsAndBytesConfig, TrainingArguments
 from datasets import load_dataset
-
-import torch
+import os
+import pandas as pd
+import numpy as np
 from lora_scratch import LinearLoRA, freeze_model, ExtendedModel
 from trl import SFTTrainer
+from peft import LoraConfig, PeftModel
 
-import os
 os.environ['HF_HOME'] = '/data1/aman/programs/'
 os.environ["TRANSFORMERS_CACHE"] = '/data1/aman/programs/'
+dataset = pd.read_csv('data/train_llama_formatted.csv')
 
+# Load dataset
+hf_dataset = Dataset.from_pandas(dataset)
+hf_dataset = hf_dataset.rename_column("data", "text")
+hf_dataset = hf_dataset.map(lambda examples: {'text': examples['text']})#, remove_columns=['__index_level_0__'])
+
+# Load model and tokenizer
 llama_base_model = LlamaForCausalLM.from_pretrained("NousResearch/Llama-2-7b-chat-hf", cache_dir='/data1/aman/programs/')
 llama_tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat-hf", cache_dir='/data1/aman/programs/')
 llama_tokenizer.pad_token = llama_tokenizer.eos_token
 llama_tokenizer.padding_side = "right"
 
-llama_lora_model = ExtendedModel(llama_base_model)
+# Ensure tokenizer and model vocab sizes match
+if llama_base_model.config.vocab_size != len(llama_tokenizer):
+    llama_tokenizer.add_tokens([llama_tokenizer.unk_token] * (llama_base_model.config.vocab_size - len(llama_tokenizer)))
+    llama_base_model.resize_token_embeddings(len(llama_tokenizer))
 
-freeze_model(llama_lora_model)
+# Apply LoRA
+phi_lora_model = ExtendedModel(llama_base_model)
+freeze_model(phi_lora_model)
 
-dataset_name = "mlabonne/guanaco-llama2-1k"
-new_model = "Llama-2-7b-chat-finetune"
+# Load dataset
+dataset = pd.read_csv('data/train_llama_formatted.csv')
 
 use_4bit = True
 bnb_4bit_compute_dtype = "bfloat16"
@@ -28,13 +48,12 @@ bnb_4bit_quant_type = "nf4"
 use_nested_quant = False
 
 output_dir = "/data1/aman/programs/"
-num_train_epochs = 1
+num_train_epochs = 10
 fp16 = False
 bf16 = False
-per_device_train_batch_size = 0.1  
-per_device_eval_batch_size = 0.1  
-gradient_accumulation_steps = 8  
-gradient_checkpointing = True
+per_device_train_batch_size = 1
+per_device_eval_batch_size = 1
+gradient_accumulation_steps = 1
 max_grad_norm = 0.3
 learning_rate = 2e-4
 weight_decay = 0.001
@@ -44,12 +63,11 @@ max_steps = -1
 warmup_ratio = 0.03
 group_by_length = True
 save_steps = 0
-logging_steps = 25
+logging_steps = 10
 max_seq_length = None
 packing = False
 device_map = {"": 0}
 
-dataset = load_dataset(dataset_name, split="train")
 compute_dtype = getattr(torch, bnb_4bit_compute_dtype)
 
 bnb_config = BitsAndBytesConfig(
@@ -62,10 +80,7 @@ bnb_config = BitsAndBytesConfig(
 if compute_dtype == torch.float16 and use_4bit:
     major, _ = torch.cuda.get_device_capability()
 
-tokenizer = AutoTokenizer.from_pretrained('NousResearch/Llama-2-7b-chat-hf', cache_dir='/data1/aman/programs/', trust_remote_code=True)
-tokenizer.pad_token = tokenizer.eos_token
-tokenizer.padding_side = "right"
-
+# Training arguments
 training_arguments = TrainingArguments(
     output_dir=output_dir,
     num_train_epochs=num_train_epochs,
@@ -76,24 +91,23 @@ training_arguments = TrainingArguments(
     logging_steps=logging_steps,
     learning_rate=learning_rate,
     weight_decay=weight_decay,
-    # fp16=fp16,
-    # bf16=bf16,
+    fp16=fp16,
+    bf16=bf16,
     max_grad_norm=max_grad_norm,
     max_steps=max_steps,
     warmup_ratio=warmup_ratio,
     group_by_length=group_by_length,
     lr_scheduler_type=lr_scheduler_type,
-    # report_to="tensorboard",
-    gradient_checkpointing=gradient_checkpointing,
 )
 
 trainer = SFTTrainer(
-    model=llama_lora_model,
-    train_dataset=dataset,
+    model=phi_lora_model,
+    train_dataset=hf_dataset,
     dataset_text_field="text",
     max_seq_length=max_seq_length,
-    tokenizer=tokenizer,
+    tokenizer=llama_tokenizer,
     args=training_arguments,
     packing=packing,
 )
+
 trainer.train()
